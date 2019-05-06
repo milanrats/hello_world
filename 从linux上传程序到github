@@ -1,0 +1,47 @@
+从Ubuntu14.04上传程序到github数据仓库
+1.安装git
+sudo apt-get install git
+2.进入到你要上传的文件夹下
+root@mafei-virtual-machine:/sdb/Workspace/github/ccschademosrc# git init
+初始化空的 Git 版本库于 /sdb/Workspace/github/ccschademosrc/.git/
+3.
+root@mafei-virtual-machine:/sdb/Workspace/github/ccschademosrc# git add .
+4.
+root@mafei-virtual-machine:/sdb/Workspace/github/ccschademosrc# git commit -m "Italy"
+[master （根提交） 1a2e9a0] Italy
+ 260 files changed, 107572 insertions(+)
+ create mode 100644
+5.
+root@mafei-virtual-machine:/sdb/Workspace/github/ccschademosrc# git remote add origin https://github.com/milanrats/mywork.git
+6.
+root@mafei-virtual-machine:/sdb/Workspace/github/ccschademosrc# git pull origin master
+Username for 'https://github.com': milanrats
+Password for 'https://milanrats@github.com': 
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+来自 https://github.com/milanrats/mywork
+ * branch            master     -> FETCH_HEAD
+ * [新分支]          master     -> origin/master
+Merge made by the 'recursive' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+7.
+root@mafei-virtual-machine:/sdb/Workspace/github/ccschademosrc# git push -u origin master
+Username for 'https://github.com': milanrats
+Password for 'https://milanrats@github.com': 
+Counting objects: 283, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (281/281), done.
+Writing objects: 100% (282/282), 2.82 MiB | 190.00 KiB/s, done.
+Total 282 (delta 19), reused 0 (delta 0)
+remote: Resolving deltas: 100% (19/19), done.
+To https://github.com/milanrats/mywork.git
+   1db722b..80d92c0  master -> master
+分支 master 设置为跟踪来自 origin 的远程分支 master。
+
+成功
+
